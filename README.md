@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# 💰 Personal Finance & Investment Tracker
 
-## Project info
+## 🏆 Competition Entry
+This project is submitted for GEMATIK 2025 - showcasing modern React development with comprehensive financial management capabilities.
 
-**URL**: https://lovable.dev/projects/25e988b1-3338-441f-bc46-f87de7bd81a3
+## 📊 Overview
+A modern, responsive web application for managing personal finances, investments, and financial goals. Built with React 18, TypeScript, and a complete UI component library for a professional user experience.
 
-## How can I edit this code?
+## ✨ Key Features
+- **📈 Asset Management** - Track investments, savings accounts, and portfolio performance
+- **💳 Transaction Tracking** - Record and categorize income/expenses with detailed analytics
+- **🎯 Goals Management** - Set and monitor financial milestones and progress
+- **📊 Interactive Dashboard** - Real-time charts and financial insights using Recharts
+- **🌙 Theme Support** - Dark/light mode with custom theme switching
+- **📱 Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **💾 Local Persistence** - All data stored locally with automatic saving
+- **🔔 Toast Notifications** - User feedback and interaction confirmations
 
-There are several ways of editing your application.
+## 🛠️ Technology Stack
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + shadcn/ui component library
+- **State Management**: React Context API with multiple providers
+- **Routing**: React Router v6 for SPA navigation
+- **Data Visualization**: Recharts for interactive charts
+- **UI Components**: Comprehensive shadcn/ui component set
+- **Form Handling**: React Hook Form with Zod validation
+- **Development**: ESLint, TypeScript strict mode
 
-**Use Lovable**
+## 🏅 Competition Highlights
+- **Modern Architecture**: Clean separation of concerns with Context providers
+- **Type Safety**: Full TypeScript implementation for robust development
+- **Performance**: Optimized React patterns with proper state management
+- **UX/UI Design**: Professional interface with responsive design principles
+- **Code Quality**: ESLint configuration and modern development practices
+- **Real-world Application**: Practical financial management solution
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/25e988b1-3338-441f-bc46-f87de7bd81a3) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+### Prerequisites
+- Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Installation & Development
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server with auto-reloading
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+### Preview Production Build
+```bash
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📁 Project Structure
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui component library
+│   ├── AssetsModal.tsx
+│   ├── TransactionManager.tsx
+│   ├── GoalsManager.tsx
+│   └── ...
+├── contexts/           # React Context providers
+│   ├── AssetContext.tsx
+│   ├── TransactionContext.tsx
+│   ├── GoalsContext.tsx
+│   └── ThemeContext.tsx
+├── pages/              # Route components
+│   ├── Dashboard.tsx
+│   ├── Home.tsx
+│   ├── Resources.tsx
+│   └── ...
+├── lib/                # Utility functions
+└── hooks/              # Custom React hooks
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎯 Project Goal
+This application demonstrates expertise in:
+- Modern React development patterns
+- TypeScript best practices
+- State management strategies
+- UI/UX design implementation
+- Responsive web development
+- Data persistence techniques
 
-## How can I deploy this project?
+Perfect for showcasing full-stack development skills in web development competitions!
 
-Simply open [Lovable](https://lovable.dev/projects/25e988b1-3338-441f-bc46-f87de7bd81a3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---

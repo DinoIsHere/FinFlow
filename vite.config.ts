@@ -15,4 +15,18 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: ['**/*.png'],
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Ensure logo is served with correct path structure
+          if (assetInfo.name === 'logo.png') {
+            return 'logo.png';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 }));

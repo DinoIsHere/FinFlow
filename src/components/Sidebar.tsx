@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { AssetsModal } from "@/components/AssetsModal";
+import logoUrl from "@/assets/logo.png";
 
 const navItems = [
   { title: "Dashboard", url: "/dashboard", icon: Home },
@@ -22,7 +23,7 @@ export function Sidebar() {
           className="flex items-center hover:opacity-80 transition-opacity"
         >
           <img
-            src="/logo.png"
+            src={logoUrl}
             alt="FinFlow Logo"
             className="w-10 h-10 lg:w-14 lg:h-14 rounded-xl"
           />

@@ -216,7 +216,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3 hover-lift">
               <img
-                src="/public/logo.png"
+                src="/logo.png"
                 alt="FinFlow Logo"
                 className="w-10 h-10 rounded-lg float"
               />

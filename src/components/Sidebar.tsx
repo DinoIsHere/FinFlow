@@ -22,7 +22,7 @@ export function Sidebar() {
           className="flex items-center hover:opacity-80 transition-opacity"
         >
           <img
-            src="/public/logo.png"
+            src="/logo.png"
             alt="FinFlow Logo"
             className="w-10 h-10 lg:w-14 lg:h-14 rounded-xl"
           />

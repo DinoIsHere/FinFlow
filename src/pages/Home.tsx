@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Target, BookOpen, Shield, ArrowRight, Sparkles, LineChart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AdvancedThemeSwitcher } from "@/components/AdvancedThemeToggle";
+import logoUrl from "@/assets/logo.png";
 
 const features = [
   {
@@ -34,17 +36,20 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img
-              src="/public/logo.png"
+              src={logoUrl}
               alt="FinFlow Logo"
               className="w-14 h-14 rounded-xl"
             />
           </Link>
-          <Link to="/dashboard">
-            <Button variant="outline" className="gap-2 glass-card hover-lift btn-premium">
-              Open Dashboard
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </Link>
+          <div className="flex items-center gap-4">
+            <AdvancedThemeSwitcher />
+            <Link to="/dashboard">
+              <Button variant="outline" className="gap-2 glass-card hover-lift btn-premium">
+                Open Dashboard
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </nav>
 
@@ -191,7 +196,7 @@ export default function Home() {
         <Card className="bg-gradient-primary border-0 overflow-hidden relative shimmer-border glow">
           <div className="absolute inset-0 bg-grid-white/10 grid-pattern" />
           <CardContent className="p-8 md:p-12 text-center relative">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 gradient-text">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Ready to Transform Your Financial Life?
             </h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
@@ -200,10 +205,10 @@ export default function Home() {
             <Link to="/dashboard">
               <Button
                 size="lg"
-                className="bg-background text-primary hover:bg-background/90 gap-2 hover-lift btn-premium"
+                className="bg-background text-white hover:bg-background/90 gap-2 hover-lift btn-premium"
               >
                 Start Your Journey
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 text-white" />
               </Button>
             </Link>
           </CardContent>
@@ -216,7 +221,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3 hover-lift">
               <img
-                src="/logo.png"
+                src={logoUrl}
                 alt="FinFlow Logo"
                 className="w-10 h-10 rounded-lg float"
               />

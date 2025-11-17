@@ -12,12 +12,14 @@ type ThemeProviderState = {
   theme: Theme;
   setTheme: (theme: Theme) => void;
   actualTheme: 'dark' | 'light';
+  isTransitioning: boolean;
 };
 
 const initialState: ThemeProviderState = {
   theme: 'system',
   actualTheme: 'dark',
   setTheme: () => null,
+  isTransitioning: false,
 };
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
@@ -32,9 +34,14 @@ export function ThemeProvider({
   );
 
   const [actualTheme, setActualTheme] = useState<'dark' | 'light'>('dark');
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const root = window.document.documentElement;
+
+    // Add transition class for smooth animations
+    root.classList.add('theme-transitioning');
+    setIsTransitioning(true);
 
     root.classList.remove('light', 'dark');
 
@@ -51,6 +58,14 @@ export function ThemeProvider({
 
     root.classList.add(resolvedTheme);
     setActualTheme(resolvedTheme);
+
+    // Remove transition class after animation completes
+    const timer = setTimeout(() => {
+      root.classList.remove('theme-transitioning');
+      setIsTransitioning(false);
+    }, 600); // Match CSS transition duration
+
+    return () => clearTimeout(timer);
   }, [theme]);
 
   const value = {
@@ -60,11 +75,16 @@ export function ThemeProvider({
       setTheme(theme);
     },
     actualTheme,
+    isTransitioning,
   };
 
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
+      {/* Grain overlay for smooth transitions */}
+      {isTransitioning && (
+        <div className="theme-grain-overlay" />
+      )}
     </ThemeProviderContext.Provider>
   );
 }

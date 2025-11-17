@@ -1,7 +1,7 @@
 import { Home, BookOpen, Newspaper } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { AdvancedThemeToggle } from "@/components/AdvancedThemeToggle";
 import { AssetsModal } from "@/components/AssetsModal";
 import logoUrl from "@/assets/logo.png";
 
@@ -60,7 +60,7 @@ export function Sidebar() {
       {/* footer */}
       <div className="p-2 lg:p-4 border-t border-sidebar-border space-y-4">
         <div className="flex items-center justify-center">
-          <ThemeToggle />
+          <AdvancedThemeToggle />
         </div>
         
         <div className="hidden lg:block p-4 rounded-lg bg-gradient-primary">

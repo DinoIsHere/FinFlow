@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img
-              src="/asset/logo.png"
+              src="/public/logo.png"
               alt="FinFlow Logo"
               className="w-14 h-14 rounded-xl"
             />
@@ -216,7 +216,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3 hover-lift">
               <img
-                src="/asset/logo.png"
+                src="/public/logo.png"
                 alt="FinFlow Logo"
                 className="w-10 h-10 rounded-lg float"
               />

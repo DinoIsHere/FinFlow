@@ -103,7 +103,3 @@ This application demonstrates expertise in:
 - UI/UX design implementation
 - Responsive web development
 - Data persistence techniques
-
-Perfect for showcasing full-stack development skills in web development competitions!
-
----
